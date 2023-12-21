@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>{%block title%}{% endblock %}Djangochat</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -18,6 +18,13 @@
             <div>
                 <a href="/" class="text-xl text-white">Djangochat</a>
             </div>
-        
+            
+            <div class="flex items-center space-x-4">
+                <a href="/login/" class="text-white hover:text-gray-200">Log in </a>
+                <a href="/signup/" class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700">sign up </a>
+            </div>
+        </nav>
+        {%block content%}
+        {%endblock%}
     </body>
 </html>
